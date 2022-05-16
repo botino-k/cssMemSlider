@@ -19,9 +19,47 @@ body{
   align-items: center;
 }
 
+input[type="radio"]{
+  visibility: hidden;
+  position: absolute;
+ 
+}
+
+button{
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.input-btn{
+  border: 2px solid beige;
+  background-color: beige;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.input-btn input:checked{
+  border: 2px solid beige;
+  background-color: transparent;
+}
+
+label {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  transition-duration: .4s;
+}
+
+
+
 .wrapper{
   max-width: 500px;
-  height: 100%;
   width: 100%;
   font-size: 22px;
   color: beige;
@@ -34,4 +72,43 @@ body{
   border-radius: 20px;
   box-shadow: 10px 5px 5px rgb(76 0 130 / 23%);
   background: rgba(50, 79, 90, 0.932);
+}
+
+.slider-block{
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider-img{
+  min-width: 100%;
+  transition: all .3s ease;
+}
+
+.btn{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid beige;
+border-radius: 90%;
+}
+
+.container__bar{
+  display: flex;
+  max-width: 150px;
+  justify-content: space-around;
+}
+
+#r1:checked ~ .item{
+  margin-left: 0;
+}
+#r2:checked ~ .item{
+  margin-left: -100%;
+}
+#r3:checked ~ .item{
+  margin-left: -200%;
+}
+#r4:checked ~ .item{
+  margin-left: -300%;
 }
