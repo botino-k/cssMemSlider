@@ -142,10 +142,10 @@ label:active .btn{
   transition: all 0.3s ease-out;
 }
 
-#r1:checked~.textAndBar #label1 .btn:hover,
-#r2:checked~.textAndBar #label2 .btn:hover,
-#r3:checked~.textAndBar #label3 .btn:hover,
-#r4:checked~.textAndBar #label4 .btn:hover{
+#r1:checked~.textAndBar #label1:hover .btn,
+#r2:checked~.textAndBar #label2:hover .btn,
+#r3:checked~.textAndBar #label3:hover .btn,
+#r4:checked~.textAndBar #label4:hover .btn{
 border: 2px solid rgb(90, 50, 70);
 transition: all 0.2s ease-out;}
 
