@@ -1,159 +1,157 @@
-*{
+* {
   padding: 0;
   margin: 0;
   border: 0;
   box-sizing: border-box;
 }
 
-img{
+html {
+  font-size: 10px;
+}
+
+img {
   display: inline-block;
   width: 100%;
 }
 
-body{
+body {
   height: 100vh;
   width: 100%;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-input[type="radio"]{
+input[type="radio"] {
   visibility: hidden;
-  position: absolute;
- 
-}
-
-button{
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
-.input-btn{
-  border: 2px solid beige;
-  background-color: beige;
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-}
-
-.input-btn input:checked{
-  border: 2px solid beige;
-  background-color: transparent;
+  display: none;
 }
 
 label {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 3.0rem;
+  height: 3.0rem;
   background-color: transparent;
   cursor: pointer;
-  transition-duration: .4s;
+  transition-duration: .3s;
+  
 }
 
+label:hover .btn{
+background-color: rgb(90, 50, 70);
+border: 2px solid rgb(90, 50, 70);
+transition: all 0.2s ease-out;
+}
 
+label:active .btn{
+  transform: scale(0.85)
+}
 
-.wrapper{
+.wrapper {
   max-width: 500px;
   width: 100%;
-  font-size: 22px;
+  font-size: 2.2rem;
   color: beige;
 }
 
-.container{
+.container {
   padding: 10px;
   border: 5px solid rgb(90, 50, 70);
-  border-radius: 20px;
-  box-shadow: 10px 5px 5px rgb(76 0 130 / 23%);
+  border-radius: 2%;
   background: rgba(50, 79, 90, 0.932);
   margin: 0 10px;
 }
 
-
-.slider-block{
+.slider-block {
   border-radius: 10px;
   display: flex;
   overflow: hidden;
   border-radius: 10px;
-  padding-bottom:  1%;
+  padding-bottom: 1%;
 }
 
-.slider-img{
+.slider-img {
   min-width: 100%;
   transition: all .3s ease;
 }
 
-.slider-description{
+.slider-description {
   min-width: 100%;
   transition: all .3s ease;
 }
 
-.btn{
+.btn {
   display: inline-block;
   width: 15px;
   height: 15px;
   border: 2px solid beige;
-border-radius: 90%;
+  border-radius: 90%;
+  background-color: beige;
 }
 
-.textAndBar{
+.textAndBar {
   display: flex;
 }
 
-
-
-
-.bar-block{
+.bar-block {
   display: flex;
-  max-width: 150px;
-  justify-content: space-around;
+
 }
 
-.description-block{
+.description-block {
   display: flex;
   overflow: hidden;
-  max-width: 90%;
+  max-width: 99%;
 }
 
 
-#r1:checked ~.slider-block .item {
+#r1:checked~.slider-block .item,
+#r1:checked~.textAndBar .text
+{
   margin-left: 0;
 }
-#r2:checked ~.slider-block .item {
+
+#r2:checked~.slider-block .item,
+#r2:checked~.textAndBar .text 
+ {
   margin-left: -100%;
 }
-#r3:checked ~.slider-block .item {
+
+#r3:checked~.slider-block .item,
+#r3:checked~.textAndBar .text
+ {
   margin-left: -200%;
 }
-#r4:checked ~.slider-block .item {
+
+#r4:checked~.slider-block .item,
+#r4:checked~.textAndBar .text
+ {
   margin-left: -300%;
 }
 
-
-
-#r1:checked ~.textAndBar .text {
-  margin-left: 0;
-}
-#r2:checked ~.textAndBar .text{
-  margin-left: -100%;
-}
-#r3:checked ~.textAndBar .text {
-  margin-left: -200%;
-}
-#r4:checked ~.textAndBar .text {
-  margin-left: -300%;
+#r1:checked~.textAndBar #label1 .btn,
+#r2:checked~.textAndBar #label2 .btn,
+#r3:checked~.textAndBar #label3 .btn,
+#r4:checked~.textAndBar #label4 .btn
+{
+  border: 2px solid beige;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
 }
 
-
+#r1:checked~.textAndBar #label1 .btn:hover,
+#r2:checked~.textAndBar #label2 .btn:hover,
+#r3:checked~.textAndBar #label3 .btn:hover,
+#r4:checked~.textAndBar #label4 .btn:hover{
+border: 2px solid rgb(90, 50, 70);
+transition: all 0.2s ease-out;}
 
 
 @media (max-width: 425.9px) {
-  .textAndBar{
+  .textAndBar {
     flex-direction: column-reverse;
     align-items: center;
   }
