@@ -63,7 +63,6 @@ label {
   width: 100%;
   font-size: 22px;
   color: beige;
-  margin: 0 10px;
 }
 
 .container{
@@ -72,16 +71,24 @@ label {
   border-radius: 20px;
   box-shadow: 10px 5px 5px rgb(76 0 130 / 23%);
   background: rgba(50, 79, 90, 0.932);
+  margin: 0 10px;
 }
+
 
 .slider-block{
   border-radius: 10px;
   display: flex;
   overflow: hidden;
   border-radius: 10px;
+  padding-bottom:  1%;
 }
 
 .slider-img{
+  min-width: 100%;
+  transition: all .3s ease;
+}
+
+.slider-description{
   min-width: 100%;
   transition: all .3s ease;
 }
@@ -94,21 +101,60 @@ label {
 border-radius: 90%;
 }
 
-.container__bar{
+.textAndBar{
+  display: flex;
+}
+
+
+
+
+.bar-block{
   display: flex;
   max-width: 150px;
   justify-content: space-around;
 }
 
-#r1:checked ~ .item{
+.description-block{
+  display: flex;
+  overflow: hidden;
+  max-width: 90%;
+}
+
+
+#r1:checked ~.slider-block .item {
   margin-left: 0;
 }
-#r2:checked ~ .item{
+#r2:checked ~.slider-block .item {
   margin-left: -100%;
 }
-#r3:checked ~ .item{
+#r3:checked ~.slider-block .item {
   margin-left: -200%;
 }
-#r4:checked ~ .item{
+#r4:checked ~.slider-block .item {
   margin-left: -300%;
+}
+
+
+
+#r1:checked ~.textAndBar .text {
+  margin-left: 0;
+}
+#r2:checked ~.textAndBar .text{
+  margin-left: -100%;
+}
+#r3:checked ~.textAndBar .text {
+  margin-left: -200%;
+}
+#r4:checked ~.textAndBar .text {
+  margin-left: -300%;
+}
+
+
+
+
+@media (max-width: 425.9px) {
+  .textAndBar{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
